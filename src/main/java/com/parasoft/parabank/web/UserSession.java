@@ -13,9 +13,14 @@ public class UserSession {
     }
 
     public Customer getCustomer() {
-        int a = 1;
-        int b = 2;
-        System.out.println(b);
+        System.out.println("Test1....");
+        System.out.println("Test2....");
+        System.out.println("Test3....");
+        return customer;
+    }
+
+    public Customer getCustomer2() {
+        System.out.println("Test1....");
         System.out.println("Test2....");
         System.out.println("Test3....");
         return customer;
