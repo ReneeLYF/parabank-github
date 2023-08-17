@@ -273,5 +273,42 @@ public class BookStoreDB extends DB {
             addedBooks.remove(book.getProductInfo().getId());
         }
     }
+// END OF FILE
+    public static void addNewItem1(TempBook tempbook) throws Exception {
+        if (addedBooks == null) {
+            addedBooks = new Hashtable<>();
+        }
+        if (addedBooks.size() >= MAX_BOOKS_TO_ADD) {
+            throw new Exception("Too many books (" + MAX_BOOKS_TO_ADD +
+                ") have been added already. Added books are removed as soon as the session of the user who added them expires, after 20 minutes of inactivity");
+        } else {
+            addedBooks.put(new Integer(tempbook.getBook().getProductInfo().getId()), tempbook);
+        }
+    }
+
+    public static synchronized void clearAddedBooks1(TempBook tempbook) {
+        if (addedBooks != null) {
+            Book book = tempbook.getBook();
+            addedBooks.remove(book.getProductInfo().getId());
+        }
+    }
+    public static void addNewItem2(TempBook tempbook) throws Exception {
+        if (addedBooks == null) {
+            addedBooks = new Hashtable<>();
+        }
+        if (addedBooks.size() >= MAX_BOOKS_TO_ADD) {
+            throw new Exception("Too many books (" + MAX_BOOKS_TO_ADD +
+                ") have been added already. Added books are removed as soon as the session of the user who added them expires, after 20 minutes of inactivity");
+        } else {
+            addedBooks.put(new Integer(tempbook.getBook().getProductInfo().getId()), tempbook);
+        }
+    }
+
+    public static synchronized void clearAddedBooks2(TempBook tempbook) {
+        if (addedBooks != null) {
+            Book book = tempbook.getBook();
+            addedBooks.remove(book.getProductInfo().getId());
+        }
+    }
 }
 // END OF FILE
