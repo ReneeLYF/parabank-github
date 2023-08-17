@@ -103,4 +103,20 @@ public class Book implements Serializable{
     public void inflatePrice(BigDecimal bigDecimal) {
         product.inflateAmount(bigDecimal);
     }
+
+    public void setProductInfo1(ProductInfo product){
+        this.product = product;
+    }
+
+    public void inflatePrice1(BigDecimal bigDecimal) {
+        product.inflateAmount(bigDecimal);
+    }
+
+    public void setProductInfo2(ProductInfo product){
+        this.product = product;
+    }
+
+    public void inflatePrice2(BigDecimal bigDecimal) {
+        product.inflateAmount(bigDecimal);
+    }
 }
